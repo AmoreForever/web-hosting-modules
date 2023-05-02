@@ -35,7 +35,7 @@ def add_module_to_full_txt(modname):
     if modname not in dmb:
         with FULL_FILE.open("a") as f:
             f.write(modname[:-3] + "\n")
-            joinedUsers.add(modname[:-3])
+            dmb.add(modname[:-3])
     else:
         return False
 
