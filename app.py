@@ -31,8 +31,8 @@ templates = Jinja2Templates(directory="templates")
 
 def add_module_to_full_txt(modname):
     with FULL_FILE.open("r") as f:
-        joinedUsers = {line.strip() for line in f}
-    if modname not in joinedUsers:
+        dmb = {line.strip() for line in f}
+    if modname not in dmb:
         with FULL_FILE.open("a") as f:
             f.write(modname[:-3] + "\n")
             joinedUsers.add(modname[:-3])
